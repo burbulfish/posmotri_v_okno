@@ -11,7 +11,7 @@ html {
 .page {
   display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -80,6 +80,7 @@ ol {
 
 .result__video {
  width: 100%;
+ 
 }
 
 .content__list-item:nth-child(n+2) {
@@ -185,7 +186,7 @@ ol {
   appearance: none;
   background-color: transparent;
   border: none;
-  min-inline-size 225px;
+  min-inline-size: 225px;
   min-block-size: 27px;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
