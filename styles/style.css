@@ -10,7 +10,6 @@ html {
 
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
   inline-size: 1200px;
   block-size: 100%;
@@ -42,7 +41,7 @@ ol {
 
 .content {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: end;
   gap: 30px;
   margin-left: 30px;
@@ -62,25 +61,29 @@ ol {
   max-height: 298px;
   overflow: auto;
   object-fit: contain;
+  margin-top: 26px;
 }
 
 .content__details {
   width: 100%;
   height: 100%;
+ 
+  
 }
-
 
 
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .result__video {
- width: 100%;
- 
+  object-fit: cover;
+  object-position: top left;
+  height: 100%;;
+  width: 100%;
 }
 
 .content__list-item:nth-child(n+2) {
@@ -90,9 +93,11 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .content__video-card-thumbnail {
+  object-fit: cover;
   width: 194px;
   height: 103px;
 }
@@ -109,12 +114,15 @@ ol {
 }
 
 .title {
-  margin-bottom: 26px;
-  font-family: Oswald;
+  font-family: 'Oswald',sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px; 
   text-transform: uppercase;
+  position: absolute;
+  top: 72px;
+  
+  
 }
 
 .content__accent {
@@ -137,7 +145,7 @@ ol {
 }
 
 .content__video-card-description {
-  margin-top: 6px;;
+  margin-top: 6px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -183,6 +191,7 @@ ol {
   
 }
 .search-form__textfield {
+  padding: 0;
   appearance: none;
   background-color: transparent;
   border: none;
@@ -193,8 +202,8 @@ ol {
   color: #fff;
   font-family: inherit;
   font-size: inherit;
+  outline: none;
 }
-
 
 
 .button {
@@ -203,7 +212,7 @@ ol {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   border: 1px solid #FFF;
@@ -219,16 +228,13 @@ ol {
 .more-button{
   width: 100%;
   height: 34px;
-  margin-bottom: 1px;
+  margin-top: 1px;
+  
 }
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
-}
-
-.search-form__textfield {
-  outline: none;
 }
 
 .search-form__label:has(.search-form__textfield:active) {
